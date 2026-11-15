@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataLab | My Projects</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 25px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #263449;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px 80px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 28px;
+            background: #0284c7;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background: #0369a1;
+        }
+
+        section {
+            padding: 60px 10%;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #1e293b;
+            padding: 28px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .project-card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        .tag {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 5px 10px;
+            background: #334155;
+            color: #7dd3fc;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+
+        .about {
+            text-align: center;
+            max-width: 750px;
+            margin: auto;
+            color: #94a3b8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #263449;
+            color: #64748b;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Matteo.</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <h1>Building with <span>Data.</span></h1>
+
+            <p>
+                Exploring data engineering, programming and analytics.
+                A collection of projects, experiments and things I'm learning
+                along the way.
+            </p>
+
+            <a href="#projects" class="button">Explore Projects</a>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">My Projects</h2>
+
+            <div class="projects">
+
+                <div class="project-card">
+                    <h3>Data Cleaning</h3>
+                    <p>
+                        Exploring techniques for cleaning, transforming
+                        and validating raw datasets using Python and Pandas.
+                    </p>
+                    <span class="tag">Python</span>
+                </div>
+
+                <div class="project-card">
+                    <h3>SQL Database</h3>
+                    <p>
+                        Working with relational databases, SQL queries,
+                        joins and data modelling.
+                    </p>
+                    <span class="tag">SQL</span>
+                </div>
+
+                <div class="project-card">
+                    <h3>Data Pipelines</h3>
+                    <p>
+                        Learning how to build automated workflows
+                        for extracting, transforming and loading data.
+                    </p>
+                    <span class="tag">Data Engineering</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="about">
+            <h2 class="section-title">About This Project</h2>
+
+            <div class="about">
+                <p>
+                    This repository is my personal learning space.
+                    Here I experiment with different technologies,
+                    solve programming problems and build practical
+                    projects while developing my technical skills.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 DataLab. Built with HTML & CSS.</p>
+    </footer>
+
+</body>
+</html>
